@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio Version 17
+
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ARPVocoder - Standalone Plugin", "ARPVocoder_StandalonePlugin.vcxproj", "{A072F25A-568E-583F-DD4A-C9E24E786E39}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C37ACA69-2FBA-B1D2-8779-05AFC6031E8B} = {C37ACA69-2FBA-B1D2-8779-05AFC6031E8B}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ARPVocoder - VST3", "ARPVocoder_VST3.vcxproj", "{82288125-326A-CBC5-A6E6-9939780442B0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C37ACA69-2FBA-B1D2-8779-05AFC6031E8B} = {C37ACA69-2FBA-B1D2-8779-05AFC6031E8B}
+		{21221FAE-934D-7BBF-C917-F01FBDB1C5D0} = {21221FAE-934D-7BBF-C917-F01FBDB1C5D0}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ARPVocoder - Shared Code", "ARPVocoder_SharedCode.vcxproj", "{C37ACA69-2FBA-B1D2-8779-05AFC6031E8B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ARPVocoder - VST3 Manifest Helper", "ARPVocoder_VST3ManifestHelper.vcxproj", "{21221FAE-934D-7BBF-C917-F01FBDB1C5D0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{82288125-326A-CBC5-A6E6-9939780442B0}.Debug|x64.ActiveCfg = Debug|x64
+		{82288125-326A-CBC5-A6E6-9939780442B0}.Debug|x64.Build.0 = Debug|x64
+		{82288125-326A-CBC5-A6E6-9939780442B0}.Release|x64.ActiveCfg = Release|x64
+		{82288125-326A-CBC5-A6E6-9939780442B0}.Release|x64.Build.0 = Release|x64
+		{A072F25A-568E-583F-DD4A-C9E24E786E39}.Debug|x64.ActiveCfg = Debug|x64
+		{A072F25A-568E-583F-DD4A-C9E24E786E39}.Debug|x64.Build.0 = Debug|x64
+		{A072F25A-568E-583F-DD4A-C9E24E786E39}.Release|x64.ActiveCfg = Release|x64
+		{A072F25A-568E-583F-DD4A-C9E24E786E39}.Release|x64.Build.0 = Release|x64
+		{C37ACA69-2FBA-B1D2-8779-05AFC6031E8B}.Debug|x64.ActiveCfg = Debug|x64
+		{C37ACA69-2FBA-B1D2-8779-05AFC6031E8B}.Debug|x64.Build.0 = Debug|x64
+		{C37ACA69-2FBA-B1D2-8779-05AFC6031E8B}.Release|x64.ActiveCfg = Release|x64
+		{C37ACA69-2FBA-B1D2-8779-05AFC6031E8B}.Release|x64.Build.0 = Release|x64
+		{21221FAE-934D-7BBF-C917-F01FBDB1C5D0}.Debug|x64.ActiveCfg = Debug|x64
+		{21221FAE-934D-7BBF-C917-F01FBDB1C5D0}.Debug|x64.Build.0 = Debug|x64
+		{21221FAE-934D-7BBF-C917-F01FBDB1C5D0}.Release|x64.ActiveCfg = Release|x64
+		{21221FAE-934D-7BBF-C917-F01FBDB1C5D0}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
