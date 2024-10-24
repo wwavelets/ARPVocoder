@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="SVsNTC" name="ARPVocoder" projectType="audioplug" useAppConfig="0"
+              addUsingNamespaceToJuceHeader="0" displaySplashScreen="0" jucerFormatVersion="1"
+              cppLanguageStandard="20" pluginManufacturer="a red panda">
+  <MAINGROUP id="I9DSDN" name="ARPVocoder">
+    <GROUP id="{D84C735F-CD84-913C-4D5A-D1740362FDDB}" name="Interface">
+      <GROUP id="{92470AB9-F446-23FB-B3C2-015ED9A46AEE}" name="interactive">
+        <FILE id="kBR4q9" name="DropDown.cpp" compile="1" resource="0" file="Source/interface/DropDown.cpp"/>
+        <FILE id="HLNvIs" name="DropDown.h" compile="0" resource="0" file="Source/interface/DropDown.h"/>
+        <FILE id="jGCnJN" name="DuoRadialSlider.cpp" compile="1" resource="0"
+              file="Source/interface/DuoRadialSlider.cpp"/>
+        <FILE id="EMVODO" name="DuoRadialSlider.h" compile="0" resource="0"
+              file="Source/interface/DuoRadialSlider.h"/>
+        <FILE id="RXUa0d" name="InputWrapper.cpp" compile="1" resource="0"
+              file="Source/interface/InputWrapper.cpp"/>
+        <FILE id="DnY5Ww" name="InputWrapper.h" compile="0" resource="0" file="Source/interface/InputWrapper.h"/>
+        <FILE id="TuStjT" name="LineEditor.cpp" compile="1" resource="0" file="Source/interface/LineEditor.cpp"/>
+        <FILE id="l5Ute7" name="LineEditor.h" compile="0" resource="0" file="Source/interface/LineEditor.h"/>
+        <FILE id="BibfRt" name="ModulationSlider.cpp" compile="1" resource="0"
+              file="Source/interface/ModulationSlider.cpp"/>
+        <FILE id="uJddsM" name="ModulationSlider.h" compile="0" resource="0"
+              file="Source/interface/ModulationSlider.h"/>
+        <FILE id="MNzls4" name="ModulationWrapper.cpp" compile="1" resource="0"
+              file="Source/interface/ModulationWrapper.cpp"/>
+        <FILE id="bRPxrb" name="ModulationWrapper.h" compile="0" resource="0"
+              file="Source/interface/ModulationWrapper.h"/>
+        <FILE id="eP5TLe" name="RadialSlider.cpp" compile="1" resource="0"
+              file="Source/interface/RadialSlider.cpp"/>
+        <FILE id="QahZtt" name="RadialSlider.h" compile="0" resource="0" file="Source/interface/RadialSlider.h"/>
+        <FILE id="ddoQle" name="RectSlider.cpp" compile="1" resource="0" file="Source/interface/RectSlider.cpp"/>
+        <FILE id="yh3YVa" name="RectSlider.h" compile="0" resource="0" file="Source/interface/RectSlider.h"/>
+        <FILE id="yevFnP" name="Slider.cpp" compile="1" resource="0" file="Source/interface/Slider.cpp"/>
+        <FILE id="ucijX7" name="Slider.h" compile="0" resource="0" file="Source/interface/Slider.h"/>
+        <FILE id="GTVJK5" name="VerticalSlider.cpp" compile="1" resource="0"
+              file="Source/interface/VerticalSlider.cpp"/>
+        <FILE id="btEW0a" name="VerticalSlider.h" compile="0" resource="0"
+              file="Source/interface/VerticalSlider.h"/>
+      </GROUP>
+      <FILE id="RHdKgo" name="FullInterface.cpp" compile="1" resource="0"
+            file="Source/interface/FullInterface.cpp"/>
+      <FILE id="GCDhsY" name="FullInterface.h" compile="0" resource="0" file="Source/interface/FullInterface.h"/>
+      <FILE id="aEGyRA" name="uwu.cpp" compile="1" resource="0" file="Source/interface/uwu.cpp"/>
+      <FILE id="sLTYEt" name="uwu.h" compile="0" resource="0" file="Source/interface/uwu.h"/>
+      <FILE id="Xk7462" name="Shaders.cpp" compile="1" resource="0" file="Source/interface/Shaders.cpp"/>
+      <FILE id="KARTd4" name="Shaders.h" compile="0" resource="0" file="Source/interface/Shaders.h"/>
+      <GROUP id="{8C28E688-53A9-5C06-F397-471A92654E1A}" name="Renderers">
+        <FILE id="LJUasX" name="TextRenderer.cpp" compile="1" resource="0"
+              file="Source/interface/TextRenderer.cpp"/>
+        <FILE id="XD7roz" name="TextRenderer.h" compile="0" resource="0" file="Source/interface/TextRenderer.h"/>
+        <FILE id="BMMfb7" name="TriangleRenderer.cpp" compile="1" resource="0"
+              file="Source/interface/TriangleRenderer.cpp"/>
+        <FILE id="sypkOZ" name="TriangleRenderer.h" compile="0" resource="0"
+              file="Source/interface/TriangleRenderer.h"/>
+        <FILE id="Qgmu8W" name="CircleRenderer.cpp" compile="1" resource="0"
+              file="Source/interface/CircleRenderer.cpp"/>
+        <FILE id="b3ZdNb" name="CircleRenderer.h" compile="0" resource="0"
+              file="Source/interface/CircleRenderer.h"/>
+        <FILE id="q6SJbT" name="DotRenderer.cpp" compile="1" resource="0" file="Source/interface/DotRenderer.cpp"/>
+        <FILE id="o5oLNJ" name="DotRenderer.h" compile="0" resource="0" file="Source/interface/DotRenderer.h"/>
+        <FILE id="RAzkZG" name="ImageRenderer.cpp" compile="1" resource="0"
+              file="Source/interface/ImageRenderer.cpp"/>
+        <FILE id="piN5y2" name="ImageRenderer.h" compile="0" resource="0" file="Source/interface/ImageRenderer.h"/>
+        <FILE id="YDsO5G" name="LineRenderer.cpp" compile="1" resource="0"
+              file="Source/interface/LineRenderer.cpp"/>
+        <FILE id="nGFLlo" name="LineRenderer.h" compile="0" resource="0" file="Source/interface/LineRenderer.h"/>
+        <FILE id="jf5cB5" name="RectRenderer.cpp" compile="1" resource="0"
+              file="Source/interface/RectRenderer.cpp"/>
+        <FILE id="gl9dWk" name="RectRenderer.h" compile="0" resource="0" file="Source/interface/RectRenderer.h"/>
+        <FILE id="UdZmOr" name="SDFRenderer.cpp" compile="1" resource="0" file="Source/interface/SDFRenderer.cpp"/>
+        <FILE id="iousHt" name="SDFRenderer.h" compile="0" resource="0" file="Source/interface/SDFRenderer.h"/>
+      </GROUP>
+    </GROUP>
+    <GROUP id="{5039C840-C480-E2E6-7D0F-BB3BE66EE923}" name="Source">
+      <FILE id="yIW5XY" name="Plugin.cpp" compile="1" resource="0" file="Source/Plugin.cpp"/>
+      <FILE id="YQOrsI" name="Plugin.h" compile="0" resource="0" file="Source/Plugin.h"/>
+      <FILE id="Z86CEt" name="VocoderRewrite.cpp" compile="1" resource="0"
+            file="Source/VocoderRewrite.cpp"/>
+      <FILE id="VVI6Hx" name="VocoderPrev.cpp" compile="1" resource="0" file="Source/VocoderPrev.cpp"/>
+      <FILE id="zejNWQ" name="PluginProcessor.cpp" compile="1" resource="0"
+            file="Source/PluginProcessor.cpp"/>
+      <FILE id="pSxPK5" name="PluginProcessor.h" compile="0" resource="0"
+            file="Source/PluginProcessor.h"/>
+      <FILE id="VIJwbt" name="PluginEditor.cpp" compile="1" resource="0"
+            file="Source/PluginEditor.cpp"/>
+      <FILE id="dtSm09" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+      <FILE id="RNQwgC" name="VocoderProcessor.cpp" compile="1" resource="0"
+            file="Source/VocoderProcessor.cpp"/>
+      <FILE id="si2ITl" name="VocoderProcessor.h" compile="0" resource="0"
+            file="Source/VocoderProcessor.h"/>
+      <FILE id="aJuK7h" name="IntegerDelay.h" compile="0" resource="0" file="Source/IntegerDelay.h"/>
+    </GROUP>
+    <GROUP id="{AC238E4F-DB69-D58B-A2D6-C429A2F2CAEA}" name="Assets">
+      <FILE id="cRD7fv" name="0.png" compile="0" resource="1" file="Source/Assets/0.png"/>
+      <FILE id="TzkIIV" name="1.png" compile="0" resource="1" file="Source/Assets/1.png"/>
+      <FILE id="cvPae7" name="2.png" compile="0" resource="1" file="Source/Assets/2.png"/>
+      <FILE id="yEpKb8" name="3.png" compile="0" resource="1" file="Source/Assets/3.png"/>
+      <FILE id="czeVRb" name="4.png" compile="0" resource="1" file="Source/Assets/4.png"/>
+      <FILE id="c3G5wo" name="5.png" compile="0" resource="1" file="Source/Assets/5.png"/>
+      <FILE id="xOjYLM" name="6.png" compile="0" resource="1" file="Source/Assets/6.png"/>
+      <FILE id="nz7AtA" name="7.png" compile="0" resource="1" file="Source/Assets/7.png"/>
+      <FILE id="nalJQb" name="8.png" compile="0" resource="1" file="Source/Assets/8.png"/>
+      <FILE id="X8g9V2" name="9.png" compile="0" resource="1" file="Source/Assets/9.png"/>
+      <FILE id="XYME69" name="10.png" compile="0" resource="1" file="Source/Assets/10.png"/>
+      <FILE id="VKV575" name="11.png" compile="0" resource="1" file="Source/Assets/11.png"/>
+      <FILE id="j8VbvZ" name="12.png" compile="0" resource="1" file="Source/Assets/12.png"/>
+      <FILE id="rkurQF" name="13.png" compile="0" resource="1" file="Source/Assets/13.png"/>
+      <FILE id="hzeM1A" name="14.png" compile="0" resource="1" file="Source/Assets/14.png"/>
+      <FILE id="JBPBWh" name="15.png" compile="0" resource="1" file="Source/Assets/15.png"/>
+      <FILE id="fGCkUv" name="16.png" compile="0" resource="1" file="Source/Assets/16.png"/>
+      <FILE id="aQIBRt" name="17.png" compile="0" resource="1" file="Source/Assets/17.png"/>
+      <FILE id="NddLoI" name="18.png" compile="0" resource="1" file="Source/Assets/18.png"/>
+      <FILE id="lvyJ6J" name="19.png" compile="0" resource="1" file="Source/Assets/19.png"/>
+      <FILE id="K7n2tf" name="20.png" compile="0" resource="1" file="Source/Assets/20.png"/>
+      <FILE id="q2jKIS" name="21.png" compile="0" resource="1" file="Source/Assets/21.png"/>
+      <FILE id="xc2g0c" name="22.png" compile="0" resource="1" file="Source/Assets/22.png"/>
+      <FILE id="OiQ0Lg" name="23.png" compile="0" resource="1" file="Source/Assets/23.png"/>
+      <FILE id="wXfZEz" name="24.png" compile="0" resource="1" file="Source/Assets/24.png"/>
+      <FILE id="wrGBU8" name="25.png" compile="0" resource="1" file="Source/Assets/25.png"/>
+      <FILE id="tblCji" name="26.png" compile="0" resource="1" file="Source/Assets/26.png"/>
+      <FILE id="zx4R7W" name="27.png" compile="0" resource="1" file="Source/Assets/27.png"/>
+      <FILE id="UbCF8h" name="28.png" compile="0" resource="1" file="Source/Assets/28.png"/>
+      <FILE id="tCsJ9k" name="29.png" compile="0" resource="1" file="Source/Assets/29.png"/>
+      <FILE id="PWGwNu" name="30.png" compile="0" resource="1" file="Source/Assets/30.png"/>
+      <FILE id="P3PbLH" name="31.png" compile="0" resource="1" file="Source/Assets/31.png"/>
+      <FILE id="VkVaiU" name="32.png" compile="0" resource="1" file="Source/Assets/32.png"/>
+      <FILE id="rjrC2x" name="33.png" compile="0" resource="1" file="Source/Assets/33.png"/>
+      <FILE id="zC3ueT" name="34.png" compile="0" resource="1" file="Source/Assets/34.png"/>
+      <FILE id="xzAGOt" name="35.png" compile="0" resource="1" file="Source/Assets/35.png"/>
+      <FILE id="IOLSJD" name="36.png" compile="0" resource="1" file="Source/Assets/36.png"/>
+      <FILE id="M0HAZx" name="37.png" compile="0" resource="1" file="Source/Assets/37.png"/>
+      <FILE id="DOdpOO" name="38.png" compile="0" resource="1" file="Source/Assets/38.png"/>
+      <FILE id="NZzD5H" name="39.png" compile="0" resource="1" file="Source/Assets/39.png"/>
+      <FILE id="XpSqUX" name="40.png" compile="0" resource="1" file="Source/Assets/40.png"/>
+      <FILE id="IQ3wAZ" name="41.png" compile="0" resource="1" file="Source/Assets/41.png"/>
+      <FILE id="p7tjc7" name="42.png" compile="0" resource="1" file="Source/Assets/42.png"/>
+      <FILE id="pk34Ve" name="43.png" compile="0" resource="1" file="Source/Assets/43.png"/>
+      <FILE id="Vvmaqi" name="44.png" compile="0" resource="1" file="Source/Assets/44.png"/>
+      <FILE id="pW7U6P" name="45.png" compile="0" resource="1" file="Source/Assets/45.png"/>
+      <FILE id="LcHxEk" name="46.png" compile="0" resource="1" file="Source/Assets/46.png"/>
+      <FILE id="catcwM" name="47.png" compile="0" resource="1" file="Source/Assets/47.png"/>
+      <FILE id="g0iB9c" name="48.png" compile="0" resource="1" file="Source/Assets/48.png"/>
+      <FILE id="el5LVN" name="49.png" compile="0" resource="1" file="Source/Assets/49.png"/>
+      <FILE id="FCs71x" name="50.png" compile="0" resource="1" file="Source/Assets/50.png"/>
+      <FILE id="oo6EQ3" name="51.png" compile="0" resource="1" file="Source/Assets/51.png"/>
+      <FILE id="S8Lp0G" name="52.png" compile="0" resource="1" file="Source/Assets/52.png"/>
+      <FILE id="MobHhy" name="53.png" compile="0" resource="1" file="Source/Assets/53.png"/>
+      <FILE id="Iskpe3" name="54.png" compile="0" resource="1" file="Source/Assets/54.png"/>
+      <FILE id="UgONZQ" name="55.png" compile="0" resource="1" file="Source/Assets/55.png"/>
+      <FILE id="LKROvu" name="56.png" compile="0" resource="1" file="Source/Assets/56.png"/>
+      <FILE id="ixB4Hg" name="57.png" compile="0" resource="1" file="Source/Assets/57.png"/>
+      <FILE id="ll0EVA" name="58.png" compile="0" resource="1" file="Source/Assets/58.png"/>
+      <FILE id="c98qWE" name="59.png" compile="0" resource="1" file="Source/Assets/59.png"/>
+      <FILE id="ePMkQW" name="60.png" compile="0" resource="1" file="Source/Assets/60.png"/>
+      <FILE id="OK02mg" name="61.png" compile="0" resource="1" file="Source/Assets/61.png"/>
+      <FILE id="BCtZAO" name="62.png" compile="0" resource="1" file="Source/Assets/62.png"/>
+      <FILE id="QLDOeW" name="63.png" compile="0" resource="1" file="Source/Assets/63.png"/>
+      <FILE id="ThSlDU" name="64.png" compile="0" resource="1" file="Source/Assets/64.png"/>
+      <FILE id="AHalh1" name="65.png" compile="0" resource="1" file="Source/Assets/65.png"/>
+      <FILE id="jS7Dir" name="66.png" compile="0" resource="1" file="Source/Assets/66.png"/>
+      <FILE id="TKP2VD" name="67.png" compile="0" resource="1" file="Source/Assets/67.png"/>
+      <FILE id="bkdnHq" name="68.png" compile="0" resource="1" file="Source/Assets/68.png"/>
+      <FILE id="ION4uv" name="69.png" compile="0" resource="1" file="Source/Assets/69.png"/>
+      <FILE id="ZyG47J" name="70.png" compile="0" resource="1" file="Source/Assets/70.png"/>
+      <FILE id="f5YLoO" name="71.png" compile="0" resource="1" file="Source/Assets/71.png"/>
+      <FILE id="cGG4yW" name="72.png" compile="0" resource="1" file="Source/Assets/72.png"/>
+      <FILE id="aqHgIA" name="73.png" compile="0" resource="1" file="Source/Assets/73.png"/>
+      <FILE id="KPr4hE" name="74.png" compile="0" resource="1" file="Source/Assets/74.png"/>
+      <FILE id="eiob1C" name="75.png" compile="0" resource="1" file="Source/Assets/75.png"/>
+      <FILE id="ndXvWi" name="76.png" compile="0" resource="1" file="Source/Assets/76.png"/>
+      <FILE id="LkcEQ7" name="77.png" compile="0" resource="1" file="Source/Assets/77.png"/>
+      <FILE id="uKcDDp" name="78.png" compile="0" resource="1" file="Source/Assets/78.png"/>
+      <FILE id="MtDY33" name="79.png" compile="0" resource="1" file="Source/Assets/79.png"/>
+      <FILE id="Fvi4Ye" name="80.png" compile="0" resource="1" file="Source/Assets/80.png"/>
+      <FILE id="W5Vk88" name="81.png" compile="0" resource="1" file="Source/Assets/81.png"/>
+      <FILE id="zyuaRd" name="82.png" compile="0" resource="1" file="Source/Assets/82.png"/>
+      <FILE id="HuhOFG" name="83.png" compile="0" resource="1" file="Source/Assets/83.png"/>
+      <FILE id="EqSmEi" name="84.png" compile="0" resource="1" file="Source/Assets/84.png"/>
+      <FILE id="dA2fJS" name="85.png" compile="0" resource="1" file="Source/Assets/85.png"/>
+      <FILE id="Td0NOq" name="86.png" compile="0" resource="1" file="Source/Assets/86.png"/>
+      <FILE id="kSMMvs" name="87.png" compile="0" resource="1" file="Source/Assets/87.png"/>
+      <FILE id="FFUknT" name="88.png" compile="0" resource="1" file="Source/Assets/88.png"/>
+      <FILE id="P9T88H" name="89.png" compile="0" resource="1" file="Source/Assets/89.png"/>
+      <FILE id="rNzIiC" name="90.png" compile="0" resource="1" file="Source/Assets/90.png"/>
+      <FILE id="AjfO4Q" name="91.png" compile="0" resource="1" file="Source/Assets/91.png"/>
+      <FILE id="zRsizv" name="92.png" compile="0" resource="1" file="Source/Assets/92.png"/>
+      <FILE id="IucYlo" name="93.png" compile="0" resource="1" file="Source/Assets/93.png"/>
+      <FILE id="eGHJLh" name="94.png" compile="0" resource="1" file="Source/Assets/94.png"/>
+    </GROUP>
+  </MAINGROUP>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="0"
+            useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_dsp" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_opengl" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+  </MODULES>
+  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"/>
+  <EXPORTFORMATS>
+    <VS2022 targetFolder="Builds/VisualStudio2022">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="NewProject"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="ARPVocoder" extraCompilerFlags="/Ob2 /Oi /Ot /GT /GL"
+                       optimisation="4"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../../JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="../../../JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../../JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../../JUCE/modules"/>
+        <MODULEPATH id="juce_opengl" path="../../../JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../../JUCE/modules"/>
+        <MODULEPATH id="juce_dsp" path="../../../JUCE/modules"/>
+      </MODULEPATHS>
+    </VS2022>
+    <LINUX_MAKE targetFolder="Builds/LinuxMakefile">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="ARPVocoder"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="C:\Users\erich\Documents\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_devices" path="C:\Users\erich\Documents\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_formats" path="C:\Users\erich\Documents\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="C:\Users\erich\Documents\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_processors" path="C:\Users\erich\Documents\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_utils" path="C:\Users\erich\Documents\JUCE\modules"/>
+        <MODULEPATH id="juce_core" path="C:\Users\erich\Documents\JUCE\modules"/>
+        <MODULEPATH id="juce_data_structures" path="C:\Users\erich\Documents\JUCE\modules"/>
+        <MODULEPATH id="juce_dsp" path="C:\Users\erich\Documents\JUCE\modules"/>
+        <MODULEPATH id="juce_events" path="C:\Users\erich\Documents\JUCE\modules"/>
+        <MODULEPATH id="juce_graphics" path="C:\Users\erich\Documents\JUCE\modules"/>
+        <MODULEPATH id="juce_gui_basics" path="C:\Users\erich\Documents\JUCE\modules"/>
+        <MODULEPATH id="juce_gui_extra" path="C:\Users\erich\Documents\JUCE\modules"/>
+        <MODULEPATH id="juce_opengl" path="C:\Users\erich\Documents\JUCE\modules"/>
+      </MODULEPATHS>
+    </LINUX_MAKE>
+    <XCODE_MAC targetFolder="Builds/MacOSX">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="ARPVocoder"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="C:\Users\erich\Documents\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_devices" path="C:\Users\erich\Documents\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_formats" path="C:\Users\erich\Documents\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="C:\Users\erich\Documents\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_processors" path="C:\Users\erich\Documents\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_utils" path="C:\Users\erich\Documents\JUCE\modules"/>
+        <MODULEPATH id="juce_core" path="C:\Users\erich\Documents\JUCE\modules"/>
+        <MODULEPATH id="juce_data_structures" path="C:\Users\erich\Documents\JUCE\modules"/>
+        <MODULEPATH id="juce_dsp" path="C:\Users\erich\Documents\JUCE\modules"/>
+        <MODULEPATH id="juce_events" path="C:\Users\erich\Documents\JUCE\modules"/>
+        <MODULEPATH id="juce_graphics" path="C:\Users\erich\Documents\JUCE\modules"/>
+        <MODULEPATH id="juce_gui_basics" path="C:\Users\erich\Documents\JUCE\modules"/>
+        <MODULEPATH id="juce_gui_extra" path="C:\Users\erich\Documents\JUCE\modules"/>
+        <MODULEPATH id="juce_opengl" path="C:\Users\erich\Documents\JUCE\modules"/>
+      </MODULEPATHS>
+    </XCODE_MAC>
+  </EXPORTFORMATS>
+</JUCERPROJECT>
