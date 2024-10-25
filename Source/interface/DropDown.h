@@ -32,8 +32,8 @@ public:
     void destroy(OpenGLWrapper&);
     //boundary not protected, proceed with caution
     inline void setVal(int _val) {
-        if(callback != nullptr) callback(val);
         val = _val;
+        if(callback != nullptr) callback(val);
     }
     inline int getVal() {
         return val;

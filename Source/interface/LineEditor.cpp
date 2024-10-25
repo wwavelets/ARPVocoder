@@ -17,7 +17,7 @@ LineEditor::LineEditor() {
     hoveredIdx = -1;
     lastMouseX = -1000;
     lastMouseY = -1000;
-    precomputation = std::vector<float>(250, 0); //lets say 250...
+    precomputation = std::vector<float>(500, 0); //lets say 500...
     precompute();
 }
 
@@ -27,7 +27,7 @@ LineEditor::~LineEditor() {
 
 void LineEditor::precompute() {
     int currentIdx = 0; float tmp = 0;
-    for (int i = 0; i < 250; i++) {
+    for (int i = 0; i < 500; i++) {
         float currentPos = std::pow(tmp, 0.333f);
         while (currentIdx + 1 < points.size() && currentPos > points[currentIdx + 1].pos.x) {
             currentIdx += 1;
@@ -41,7 +41,7 @@ void LineEditor::precompute() {
             precomputation[i] = points[currentIdx].pos.y;
         }
         precomputation[i] = std::pow(precomputation[i], 3.0f);
-        tmp += (1.0f / 249.0f);
+        tmp += (1.0f / 499.0f);
     }
 }
 void LineEditor::getHovered(InputWrapper& inputs) {
@@ -325,7 +325,10 @@ void LineEditor::load(std::stringstream& in) {
     curvePoints.resize(numCurvePoints);
     for (auto& x : curvePoints) {
         in >> x.amt2;
+        x.amt = x.amt2 + x.amt2 * x.amt2 * x.amt2 * x.amt2 * x.amt2;
     }
+    setCurvePoints();
+    precompute();
 }
 
 void LineEditor::save(std::stringstream& out) {

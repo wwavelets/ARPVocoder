@@ -133,7 +133,7 @@ if not exist &quot;$(OutDir)/NewProject.vst3\Contents\Resources\&quot; del /s /q
       <WarningLevel>Level4</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <AdditionalOptions>/Ob2 /Oi /Ot /GT /GL %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/Ob3 /Oi /Ot /GT /GL %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <ResourceCompile>

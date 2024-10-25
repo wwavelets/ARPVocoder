@@ -40,6 +40,12 @@ NewProjectAudioProcessor::NewProjectAudioProcessor()
     parameters.formant = formant;
     parameters.mix = mix;
     plugin = std::make_unique<Plugin>(parameters, this);
+
+    {
+        std::lock_guard<std::mutex> lock(m);
+        initialized = true;
+    }
+    cv.notify_one();
 }
 
 NewProjectAudioProcessor::~NewProjectAudioProcessor()
@@ -216,6 +222,10 @@ void NewProjectAudioProcessor::getStateInformation (juce::MemoryBlock& destData)
     // You should use this method to store your parameters in the memory block.
     // You could do that either as raw data, or use the XML or ValueTree classes
     // as intermediaries to make it easy to save and load complex data.
+
+    std::unique_lock<std::mutex> lock(m);
+    cv.wait(lock, [this] {return this->initialized; });
+
     std::stringstream res;
     plugin->savePlugin(res); 
     juce::MemoryOutputStream(destData, true).writeString(res.str());
@@ -225,6 +235,9 @@ void NewProjectAudioProcessor::setStateInformation (const void* data, int sizeIn
 {
     // You should use this method to restore your parameters from this memory block,
     // whose contents will have been created by the getStateInformation() call.
+    std::unique_lock<std::mutex> lock(m);
+    cv.wait(lock, [this] {return this->initialized; });
+
     std::string res = juce::MemoryInputStream(data, static_cast<size_t>(sizeInBytes), false).readString().toStdString();
     std::stringstream in(res);
     plugin->loadPlugin(in);

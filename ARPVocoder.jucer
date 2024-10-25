@@ -210,7 +210,7 @@
     <VS2022 targetFolder="Builds/VisualStudio2022">
       <CONFIGURATIONS>
         <CONFIGURATION isDebug="1" name="Debug" targetName="NewProject"/>
-        <CONFIGURATION isDebug="0" name="Release" targetName="ARPVocoder" extraCompilerFlags="/Ob2 /Oi /Ot /GT /GL"
+        <CONFIGURATION isDebug="0" name="Release" targetName="ARPVocoder" extraCompilerFlags="/Ob3 /Oi /Ot /GT /GL"
                        optimisation="4"/>
       </CONFIGURATIONS>
       <MODULEPATHS>

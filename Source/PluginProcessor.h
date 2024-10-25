@@ -83,7 +83,9 @@ private:
     juce::AudioParameterFloat* formant; // -12 to 12
     juce::AudioParameterFloat* mix; // -1 = carrier, 0 = plugin output, 1 = modulator
 
-
+    std::mutex m;
+    std::condition_variable cv;
+    bool initialized = false;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (NewProjectAudioProcessor)
 };

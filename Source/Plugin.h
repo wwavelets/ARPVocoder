@@ -85,6 +85,9 @@ private:
     TextRenderer releaseText;
     TextRenderer mixText;
 
+    bool initialized = false;
+    std::condition_variable cv;
+    std::mutex m;
     enum {
         Default,
         PreGain,

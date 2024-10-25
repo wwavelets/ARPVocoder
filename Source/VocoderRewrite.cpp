@@ -72,7 +72,12 @@ public:
         return gain;
     };
     int getNumBands() {
-        return processorLeft.load(std::memory_order_acquire)->getNumBands();
+        if (mode == Default) {
+            return processorLeft.load(std::memory_order_acquire)->getNumBands();
+        }
+        else if (mode == LinearPhase) {
+            return processorLeftFIR.load(std::memory_order_acquire)->getNumBands();
+        }
     }
 
     double getSampleRate() {
@@ -462,6 +467,9 @@ private:
                 gain[cur++] += getGain(id); //+= because we are summing left and right
             }
             return cur;
+        }
+        int getNumBands() {
+            return numBands;
         }
     private:
         struct delayLine {

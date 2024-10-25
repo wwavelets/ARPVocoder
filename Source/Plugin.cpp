@@ -83,6 +83,12 @@ Plugin::Plugin(VocoderParameters parameters, juce::AudioProcessor* head) : param
     carrierBandSlider = std::make_unique<RadialSlider>(parameters.carrierBandWidth);
     modulatorBandSlider = std::make_unique<RadialSlider>(parameters.modulatorBandWidth);
     mixSlider = std::make_unique<RadialSlider>(parameters.mix);
+
+    {
+        std::lock_guard<std::mutex> lock(m);
+        initialized = true;
+    }
+    cv.notify_one();
 }
 Plugin::~Plugin() {
 
@@ -190,9 +196,6 @@ void Plugin::init(OpenGLWrapper& opengl)
         slider.init(opengl);
         slider.setColor(juce::Colours::darkred, juce::Colours::darkred.withAlpha(0.25f));
     }
-
-
-
 
     attackText.setText(opengl, "Attack", 355, 185, 0.225f);
     attackText.setColor(juce::Colours::darkred);
@@ -388,7 +391,7 @@ void Plugin::destroy(OpenGLWrapper&opengl)
 
 
     for (auto& slider : bandSliders) slider.destroy(opengl);
-    bandSliders.clear();
+    //bandSliders.clear();
 
 
     attackSlider->destroy(opengl);
@@ -412,6 +415,10 @@ void Plugin::destroy(OpenGLWrapper&opengl)
 
 
 void Plugin::loadPlugin(std::stringstream& in) {
+
+    std::unique_lock<std::mutex> lock(m);
+    cv.wait(lock, [this] {return this->initialized; });
+
     carrierMap.load(in);
     modulatorMap.load(in);
     for (auto& x : bandData) in >> x.delay >> x.envelope >> x.gain >> x.modulatorGain >> x.postGain;
@@ -420,6 +427,7 @@ void Plugin::loadPlugin(std::stringstream& in) {
     in >> val; numBands.setVal(val);
     in >> val; numRepeat.setVal(val);
     in >> val; filterMode.setVal(val);
+    in >> val; modulatorType.setVal(val);
 
     float fval;
     in >> fval;  (*(parameters.attack)) = fval;
@@ -438,6 +446,7 @@ void Plugin::savePlugin(std::stringstream& out) {
     out << numBands.getVal() << "\n";
     out << numRepeat.getVal() << "\n";
     out << filterMode.getVal() << "\n";
+    out << modulatorType.getVal() << "\n";
 
     out << std::fixed << std::setprecision(8) << (*(parameters.attack)).get() << "\n";
     out << std::fixed << std::setprecision(8) << (*(parameters.release)).get() << "\n";
