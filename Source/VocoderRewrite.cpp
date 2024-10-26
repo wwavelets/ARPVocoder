@@ -45,7 +45,10 @@ public:
         modulatorLatencyCompensation.prepare(juce::dsp::ProcessSpec{ sampleRate, 1, 2 });
     };
     ~VocoderProcessor() {
-
+        delete processorLeft.load(std::memory_order_acquire);
+        delete processorRight.load(std::memory_order_acquire);
+        delete processorLeftFIR.load(std::memory_order_acquire);
+        delete processorRightFIR.load(std::memory_order_acquire);
     }
     void setSampleRate(float rate) {
         sampleRate = rate;
@@ -841,8 +844,9 @@ private:
         std::vector<band> bands;
     };
 
-    std::atomic<std::shared_ptr<FIRVocoderInternal>> processorLeftFIR, processorRightFIR;
-    std::atomic<std::shared_ptr<VocoderInternal>> processorLeft, processorRight;
+    //THE ONLY TIME IM USING A RAW POINTER BECAUSE ATOMIC SMART PTRS ARENT SUPPORTED IN STANDARD LIBRARY (??)
+    std::atomic<FIRVocoderInternal*> processorLeftFIR{ nullptr }, processorRightFIR{ nullptr }; //important! this is a pointer and it should be deleted
+    std::atomic<VocoderInternal*> processorLeft{ nullptr }, processorRight{ nullptr }; //important! this is a pointer and it should be deleted
     std::vector<float> gain;
     std::shared_ptr<float[]> resLeft = nullptr;
     std::shared_ptr<float[]> resRight = nullptr;
@@ -874,14 +878,24 @@ private:
 
     void initialize() {
         //20.0152312641 is calibrated so that when the buffer size is 1/12 of an octave, it is tuned to A=440 ^^;
-        processorLeft.store(std::make_shared<VocoderInternal>(bufferSize, 5, sampleRate, 20.0152312641, sampleRate / 2, bandWidth, parameters, std::make_shared<std::vector<band*>>()), std::memory_order_release);
-        processorRight.store(std::make_shared<VocoderInternal>(bufferSize, 5, sampleRate, 20.0152312641, sampleRate / 2, bandWidth, parameters, std::make_shared<std::vector<band*>>()), std::memory_order_release);
+        {
+            auto tmp = processorLeft.load(std::memory_order_acquire);
+            processorLeft.store(new VocoderInternal(bufferSize, 5, sampleRate, 20.0152312641, sampleRate / 2, bandWidth, parameters, std::make_shared<std::vector<band*>>()), std::memory_order_release);
+            delete tmp;
+            tmp = processorRight.load(std::memory_order_acquire);
+            processorRight.store(new VocoderInternal(bufferSize, 5, sampleRate, 20.0152312641, sampleRate / 2, bandWidth, parameters, std::make_shared<std::vector<band*>>()), std::memory_order_release);
+            delete tmp;
+        }
 
         float range = sampleRate / 2.0 / 20.0152312641;
         int numBands = static_cast<int>(log(range) / log(bandWidth) + 0.5f);
         if (true && numBands <= 40) {
-            processorLeftFIR.store(std::make_shared<FIRVocoderInternal>(sampleRate, numBands, parameters), std::memory_order_release);
-            processorRightFIR.store(std::make_shared<FIRVocoderInternal>(sampleRate, numBands, parameters), std::memory_order_release);
+            auto tmp = processorLeftFIR.load(std::memory_order_acquire);
+            processorLeftFIR.store(new FIRVocoderInternal(sampleRate, numBands, parameters), std::memory_order_release);
+            delete tmp;
+            tmp = processorRightFIR.load(std::memory_order_acquire);
+            processorRightFIR.store(new FIRVocoderInternal(sampleRate, numBands, parameters), std::memory_order_release);
+            delete tmp;
         }
 
         gain.resize(processorLeft.load(std::memory_order_acquire)->getNumBands());

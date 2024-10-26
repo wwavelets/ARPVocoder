@@ -90,6 +90,7 @@ Plugin::Plugin(VocoderParameters parameters, juce::AudioProcessor* head) : param
     }
     cv.notify_one();
 }
+
 Plugin::~Plugin() {
 
 }
