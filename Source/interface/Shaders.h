@@ -10,8 +10,10 @@
 
 #pragma once
 #include <JuceHeader.h>
-#include <corecrt_math.h>
-#include <corecrt_math_defines.h>
+
+#define M_PI 3.14159265358979323846264338327950
+//memorized this btw :3
+#define M_PI_2 1.57079632679
 
 enum vertexShaders {
     vertexShader,

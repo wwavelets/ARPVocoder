@@ -77,12 +77,22 @@ Plugin::Plugin(VocoderParameters parameters, juce::AudioProcessor* head) : param
 
     modulatorType.setChoices({ "Self", "Sidechain" });
 
-    attackSlider = std::make_unique<RadialSlider>(parameters.attack);
-    releaseSlider = std::make_unique<RadialSlider>(parameters.release);
-    formantSlider = std::make_unique<RadialSlider>(parameters.formant);
-    carrierBandSlider = std::make_unique<RadialSlider>(parameters.carrierBandWidth);
-    modulatorBandSlider = std::make_unique<RadialSlider>(parameters.modulatorBandWidth);
-    mixSlider = std::make_unique<RadialSlider>(parameters.mix);
+    attackSlider = std::make_unique<RadialSlider>(parameters.attack, 0.005f);
+    releaseSlider = std::make_unique<RadialSlider>(parameters.release, 0.01f);
+    formantSlider = std::make_unique<RadialSlider>(parameters.formant, 1.0f);
+    carrierBandSlider = std::make_unique<RadialSlider>(parameters.carrierBandWidth, 1.0f);
+    modulatorBandSlider = std::make_unique<RadialSlider>(parameters.modulatorBandWidth, 0.0f);
+    mixSlider = std::make_unique<RadialSlider>(parameters.mix, 0.0f);
+    /*
+    
+
+    addParameter(attack = new juce::AudioParameterFloat("attack", "Attack", juce::NormalisableRange<float>(0.005f, 1.0f, 0, 0.5f), 0.005f));
+    addParameter(release = new juce::AudioParameterFloat("release", "Release", juce::NormalisableRange<float>(0.005f, 1.0f, 0, 0.5f), 0.01f));
+    addParameter(carrierBandWidth = new juce::AudioParameterFloat("carrier bandwidth", "Carrier Bandwidth", juce::NormalisableRange<float>(0.1f, 4.0f, 0, 0.5f), 1.0f));
+    addParameter(modulatorBandWidth = new juce::AudioParameterFloat("modulator bandwidth", "Modulator Bandwidth", juce::NormalisableRange<float>(0.1f, 4.0f, 0, 0.5f), 1.0f));
+    addParameter(formant = new juce::AudioParameterFloat("formant shift", "Formant Shift", juce::NormalisableRange<float>(-24.0f, 24.0f), 0.0f));
+    addParameter(mix = new juce::AudioParameterFloat("mix", "Mix", juce::NormalisableRange<float>(-1.0f, 1.0f), 0.0f));
+    */
 
     {
         std::lock_guard<std::mutex> lock(m);
@@ -266,7 +276,9 @@ void Plugin::updateSliders() {
     float width = 900.0 / numBars;
     float cur = 50;
     for (int i = 0; i < numBars; i++) {
-        bandSliders[i].setSlider(cur, 315, cur + width, 315 + 1 * 200);
+        float defaultVal = 0.5f;
+        if (viewingMode == Delay) defaultVal = 0.0f;
+        bandSliders[i].setSlider(cur, 315, cur + width, 315 + 1 * 200, defaultVal);
         //bandSliders[i].setVal(0.5f);
         cur += width;
     }
@@ -296,7 +308,7 @@ void Plugin::update(OpenGLWrapper&opengl, InputWrapper&inputs)
         inputs.setFocused();
         interfaceFocused = true;
     }
-    if (interfaceFocused == true && (!inputs.mouseDown())) {
+    if (interfaceFocused == true && (!inputs.mouseDown()) && (!inputs.rightMouseDown())) {
         interfaceFocused = false;
         inputs.setNotFocused();
     }

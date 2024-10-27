@@ -76,7 +76,6 @@
       <FILE id="YQOrsI" name="Plugin.h" compile="0" resource="0" file="Source/Plugin.h"/>
       <FILE id="Z86CEt" name="VocoderRewrite.cpp" compile="1" resource="0"
             file="Source/VocoderRewrite.cpp"/>
-      <FILE id="VVI6Hx" name="VocoderPrev.cpp" compile="1" resource="0" file="Source/VocoderPrev.cpp"/>
       <FILE id="zejNWQ" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>
       <FILE id="pSxPK5" name="PluginProcessor.h" compile="0" resource="0"
@@ -84,10 +83,6 @@
       <FILE id="VIJwbt" name="PluginEditor.cpp" compile="1" resource="0"
             file="Source/PluginEditor.cpp"/>
       <FILE id="dtSm09" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
-      <FILE id="RNQwgC" name="VocoderProcessor.cpp" compile="1" resource="0"
-            file="Source/VocoderProcessor.cpp"/>
-      <FILE id="si2ITl" name="VocoderProcessor.h" compile="0" resource="0"
-            file="Source/VocoderProcessor.h"/>
       <FILE id="aJuK7h" name="IntegerDelay.h" compile="0" resource="0" file="Source/IntegerDelay.h"/>
     </GROUP>
     <GROUP id="{AC238E4F-DB69-D58B-A2D6-C429A2F2CAEA}" name="Assets">

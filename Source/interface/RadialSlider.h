@@ -18,7 +18,7 @@
 #include <algorithm>
 class RadialSlider {
 public:
-    RadialSlider(juce::AudioParameterFloat*);
+    RadialSlider(juce::AudioParameterFloat*, float);
     void init(OpenGLWrapper&);
     void setSlider(float, float, float); // x, y, size
     void setColor(juce::Colour, juce::Colour = juce::Colour(0xFF404040));
@@ -32,6 +32,7 @@ public:
         return (*val);
     }
 private:
+    float defaultVal = 0;
     float x, y, sz;
     juce::AudioParameterFloat* val; // 0 <= val <= 1
     int clickTick;

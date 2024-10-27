@@ -635,7 +635,7 @@ private:
             return res;
         }
 
-        __forceinline float* process(const float* carrier) {
+        inline float* process(const float* carrier) {
             auto carrierCopyPtr = carrierCopy.get();
 
             memcpy(carrierCopyPtr, carrier, sizeof(float) * numSamples);
@@ -766,7 +766,7 @@ private:
             return cur;
         }
 
-        __forceinline std::shared_ptr<float[]> process(float* carrier, float* modulator) { //owo!
+        inline std::shared_ptr<float[]> process(float* carrier, float* modulator) { //owo!
 
             std::fill(res.get(), res.get() + numSamples, 0.0f);
             for (auto& x : bands) {

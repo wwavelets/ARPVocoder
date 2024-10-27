@@ -139,10 +139,8 @@ OBJECTS_SHARED_CODE := \
   $(JUCE_OBJDIR)/SDFRenderer_e41d6ea3.o \
   $(JUCE_OBJDIR)/Plugin_124bbd3c.o \
   $(JUCE_OBJDIR)/VocoderRewrite_85e9269.o \
-  $(JUCE_OBJDIR)/VocoderPrev_5300d040.o \
   $(JUCE_OBJDIR)/PluginProcessor_a059e380.o \
   $(JUCE_OBJDIR)/PluginEditor_94d4fb09.o \
-  $(JUCE_OBJDIR)/VocoderProcessor_95d4506f.o \
   $(JUCE_OBJDIR)/BinaryData_ce4232d4.o \
   $(JUCE_OBJDIR)/include_juce_audio_basics_8a4e984a.o \
   $(JUCE_OBJDIR)/include_juce_audio_devices_63111d02.o \
@@ -343,11 +341,6 @@ $(JUCE_OBJDIR)/VocoderRewrite_85e9269.o: ../../Source/VocoderRewrite.cpp
 	@echo "Compiling VocoderRewrite.cpp"
 	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_SHARED_CODE) $(JUCE_CFLAGS_SHARED_CODE) -o "$@" -c "$<"
 
-$(JUCE_OBJDIR)/VocoderPrev_5300d040.o: ../../Source/VocoderPrev.cpp
-	-$(V_AT)mkdir -p $(@D)
-	@echo "Compiling VocoderPrev.cpp"
-	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_SHARED_CODE) $(JUCE_CFLAGS_SHARED_CODE) -o "$@" -c "$<"
-
 $(JUCE_OBJDIR)/PluginProcessor_a059e380.o: ../../Source/PluginProcessor.cpp
 	-$(V_AT)mkdir -p $(@D)
 	@echo "Compiling PluginProcessor.cpp"
@@ -356,11 +349,6 @@ $(JUCE_OBJDIR)/PluginProcessor_a059e380.o: ../../Source/PluginProcessor.cpp
 $(JUCE_OBJDIR)/PluginEditor_94d4fb09.o: ../../Source/PluginEditor.cpp
 	-$(V_AT)mkdir -p $(@D)
 	@echo "Compiling PluginEditor.cpp"
-	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_SHARED_CODE) $(JUCE_CFLAGS_SHARED_CODE) -o "$@" -c "$<"
-
-$(JUCE_OBJDIR)/VocoderProcessor_95d4506f.o: ../../Source/VocoderProcessor.cpp
-	-$(V_AT)mkdir -p $(@D)
-	@echo "Compiling VocoderProcessor.cpp"
 	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_SHARED_CODE) $(JUCE_CFLAGS_SHARED_CODE) -o "$@" -c "$<"
 
 $(JUCE_OBJDIR)/BinaryData_ce4232d4.o: ../../JuceLibraryCode/BinaryData.cpp

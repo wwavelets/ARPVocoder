@@ -69,10 +69,10 @@ void DuoRadialSlider::updateInputs(InputWrapper& inputs) {
 }
 void DuoRadialSlider::renderSlider(OpenGLWrapper& opengl) {
     float mid = 3.92699f - 4.71239f * val; // 5/4 pi -  6/4 pi * val
-    if (mid < (float)M_PI_2)
-        coloredBar.setAngle(mid, (float)M_PI_2);
+    if (mid < (float)1.57079632679)
+        coloredBar.setAngle(mid, (float)1.57079632679);
     else
-        coloredBar.setAngle((float)M_PI_2, mid);
+        coloredBar.setAngle((float)1.57079632679, mid);
     fullBar.setAngle(-0.7854, 3.92699);
     if (mouseHovered || sliderFocused) {
         leftDot.setSize(2.5f);

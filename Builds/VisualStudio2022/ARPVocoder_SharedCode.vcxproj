@@ -163,10 +163,8 @@
     <ClCompile Include="..\..\Source\interface\SDFRenderer.cpp"/>
     <ClCompile Include="..\..\Source\Plugin.cpp"/>
     <ClCompile Include="..\..\Source\VocoderRewrite.cpp"/>
-    <ClCompile Include="..\..\Source\VocoderPrev.cpp"/>
     <ClCompile Include="..\..\Source\PluginProcessor.cpp"/>
     <ClCompile Include="..\..\Source\PluginEditor.cpp"/>
-    <ClCompile Include="..\..\Source\VocoderProcessor.cpp"/>
     <ClCompile Include="..\..\..\..\..\JUCE\modules\juce_audio_basics\audio_play_head\juce_AudioPlayHead.cpp">
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
@@ -3005,7 +3003,6 @@
     <ClInclude Include="..\..\Source\Plugin.h"/>
     <ClInclude Include="..\..\Source\PluginProcessor.h"/>
     <ClInclude Include="..\..\Source\PluginEditor.h"/>
-    <ClInclude Include="..\..\Source\VocoderProcessor.h"/>
     <ClInclude Include="..\..\Source\IntegerDelay.h"/>
     <ClInclude Include="..\..\..\..\..\JUCE\modules\juce_audio_basics\audio_play_head\juce_AudioPlayHead.h"/>
     <ClInclude Include="..\..\..\..\..\JUCE\modules\juce_audio_basics\buffers\juce_AudioChannelSet.h"/>

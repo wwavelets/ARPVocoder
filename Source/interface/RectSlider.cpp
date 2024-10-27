@@ -18,7 +18,8 @@ void RectSlider::init(OpenGLWrapper& opengl) {
     upperRect.init(opengl);
     lowerRect.init(opengl);
 }
-void RectSlider::setSlider(float _x, float _y, float _x2, float _y2) {
+void RectSlider::setSlider(float _x, float _y, float _x2, float _y2, float _defaultVal)  {
+    defaultVal = _defaultVal;
     x = _x;y = _y;x2 = _x2;y2 = _y2;
     boundingBox = juce::Rectangle<float>(x, y, x2 - x, y2 - y);
 }
@@ -38,6 +39,12 @@ void RectSlider::updateInputs(InputWrapper&inputs) {
     else lerp = inputs.prevMouseY()* abs(inputs.mouseX() - mid) / (r - l) + inputs.mouseY() * abs(inputs.prevMouseX() - mid) / (r - l);
     if (inputs.mouseDown() && l <= x2 && x <= r) {
         val = std::clamp( (lerp - y) / (y2 - y),0.0f, 1.0f);
+        if (callback != nullptr) {
+            callback(val, id);
+        }
+    }
+    if (inputs.rightMouseDown() && l <= x2 && x <= r) {
+        val = defaultVal;
         if (callback != nullptr) {
             callback(val, id);
         }

@@ -10,7 +10,7 @@
 
 #include "RadialSlider.h"
 
-RadialSlider::RadialSlider(juce::AudioParameterFloat* val) : val(val) {
+RadialSlider::RadialSlider(juce::AudioParameterFloat* val, float defaultVal) : val(val), defaultVal(defaultVal) {
     val = 0;
     sliderFocused = false;
     mouseHovered = false;
@@ -62,6 +62,10 @@ void RadialSlider::updateInputs(InputWrapper& inputs) {
         sliderFocused = true;
         inputs.setFocused();
         clickTick = 1;
+    }
+
+    if (mouseHovered == true && inputs.rightMouseDown() && !inputs.rightMouseWasDown()) {
+        (*val) = defaultVal;
     }
 
     if (clickTick < uwu::constants::EXPAND_TICKS) clickTick++;

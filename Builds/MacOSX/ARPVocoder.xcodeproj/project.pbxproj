@@ -36,7 +36,6 @@
 		19D44FD833FA315D5C200508 /* Shaders.cpp */ = {isa = PBXBuildFile; fileRef = AF5951BAD73C04AD11B42567; };
 		1A9C51C774938D8DFF51D61F /* include_juce_events.mm */ = {isa = PBXBuildFile; fileRef = 4AF964352F94D7A314CC5E34; };
 		23668B2FC9CF9892E88429B7 /* AU */ = {isa = PBXBuildFile; fileRef = 8556BFB05D4916D6111EA8E0; };
-		3500DB1D72ABE26CA7B71F6E /* VocoderPrev.cpp */ = {isa = PBXBuildFile; fileRef = F54C6D07012ACC6A728C40F9; };
 		3538002876209CF44B77FE55 /* Shared Code */ = {isa = PBXBuildFile; fileRef = 290110892D2826AC80303059; };
 		37AF742A4A33AF3F3F289F38 /* uwu.cpp */ = {isa = PBXBuildFile; fileRef = 683C43EBCE302DA8BC155489; };
 		46B3FB6AAE1FF4C0687E229D /* include_juce_gui_extra.mm */ = {isa = PBXBuildFile; fileRef = 2DDCFBCD0DA75A241C939F04; };
@@ -84,7 +83,6 @@
 		D289DED491326D07EA8BBAA5 /* VST3 Manifest Helper */ = {isa = PBXBuildFile; fileRef = 87C6E0BB54E0B2831D3EA4CD; };
 		D2F8A9D681F9BD65A4E20ACB /* BinaryData.cpp */ = {isa = PBXBuildFile; fileRef = 9437B692D13CA69ADC3A516E; };
 		D865E6140C91E74EEF0506B0 /* MetalKit.framework */ = {isa = PBXBuildFile; fileRef = 56C1ACDCDDE5AE7ECA0E73BC; settings = { ATTRIBUTES = (Weak, ); }; };
-		DBE58F716381DA0C88B565DF /* VocoderProcessor.cpp */ = {isa = PBXBuildFile; fileRef = 66422AE87CA6B198186B8BDF; };
 		DC93E858D05FB8672DB2BB09 /* DuoRadialSlider.cpp */ = {isa = PBXBuildFile; fileRef = CAA44278A5E12A6BF6D5AB4D; };
 		E43D19051F256E752F6A685C /* Standalone Plugin */ = {isa = PBXBuildFile; fileRef = 3A0F8B9A43A8BA5FAD3AC6D9; };
 		E82197E3F96BB6D142FAA279 /* ImageRenderer.cpp */ = {isa = PBXBuildFile; fileRef = 58DC043097F463DE94210F61; };
@@ -178,7 +176,6 @@
 		5723737228596C9C9F556B53 /* RectSlider.h */ /* RectSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RectSlider.h; path = ../../Source/interface/RectSlider.h; sourceTree = SOURCE_ROOT; };
 		58DC043097F463DE94210F61 /* ImageRenderer.cpp */ /* ImageRenderer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ImageRenderer.cpp; path = ../../Source/interface/ImageRenderer.cpp; sourceTree = SOURCE_ROOT; };
 		59EBBEDA2FD4AF819D53225A /* juce_opengl */ /* juce_opengl */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_opengl; path = "~/JUCE/modules/juce_opengl"; sourceTree = "<absolute>"; };
-		5BF6EAAB6BA7DE0AF101394D /* VocoderProcessor.h */ /* VocoderProcessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VocoderProcessor.h; path = ../../Source/VocoderProcessor.h; sourceTree = SOURCE_ROOT; };
 		5CD8AE0B5444C4FA12624A44 /* 78.png */ /* 78.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 78.png; path = ../../Source/Assets/78.png; sourceTree = SOURCE_ROOT; };
 		5D19F3CE5A47E1C6296E4944 /* SDFRenderer.h */ /* SDFRenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDFRenderer.h; path = ../../Source/interface/SDFRenderer.h; sourceTree = SOURCE_ROOT; };
 		5D7E872AE6BF878ABF81BFA0 /* include_juce_gui_basics.mm */ /* include_juce_gui_basics.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_gui_basics.mm; path = ../../JuceLibraryCode/include_juce_gui_basics.mm; sourceTree = SOURCE_ROOT; };
@@ -187,7 +184,6 @@
 		62C303C93B308EA64226EA6D /* LineRenderer.cpp */ /* LineRenderer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = LineRenderer.cpp; path = ../../Source/interface/LineRenderer.cpp; sourceTree = SOURCE_ROOT; };
 		62E1067E77E209220CBDFEB7 /* 51.png */ /* 51.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 51.png; path = ../../Source/Assets/51.png; sourceTree = SOURCE_ROOT; };
 		63825A3E04E7EFEEC3559942 /* 18.png */ /* 18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 18.png; path = ../../Source/Assets/18.png; sourceTree = SOURCE_ROOT; };
-		66422AE87CA6B198186B8BDF /* VocoderProcessor.cpp */ /* VocoderProcessor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = VocoderProcessor.cpp; path = ../../Source/VocoderProcessor.cpp; sourceTree = SOURCE_ROOT; };
 		664BA258A5554034762D5B82 /* 33.png */ /* 33.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 33.png; path = ../../Source/Assets/33.png; sourceTree = SOURCE_ROOT; };
 		67491CCCB81C1C60E2756AE9 /* 21.png */ /* 21.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 21.png; path = ../../Source/Assets/21.png; sourceTree = SOURCE_ROOT; };
 		683C43EBCE302DA8BC155489 /* uwu.cpp */ /* uwu.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = uwu.cpp; path = ../../Source/interface/uwu.cpp; sourceTree = SOURCE_ROOT; };
@@ -310,7 +306,6 @@
 		EF32F5B097FFF2DB9D94C2F4 /* juce_gui_basics */ /* juce_gui_basics */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_gui_basics; path = "~/JUCE/modules/juce_gui_basics"; sourceTree = "<absolute>"; };
 		F24F565EF2095E1CBFC0A153 /* 86.png */ /* 86.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 86.png; path = ../../Source/Assets/86.png; sourceTree = SOURCE_ROOT; };
 		F466B45D076AC7ECFC5014C6 /* PluginProcessor.cpp */ /* PluginProcessor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = PluginProcessor.cpp; path = ../../Source/PluginProcessor.cpp; sourceTree = SOURCE_ROOT; };
-		F54C6D07012ACC6A728C40F9 /* VocoderPrev.cpp */ /* VocoderPrev.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = VocoderPrev.cpp; path = ../../Source/VocoderPrev.cpp; sourceTree = SOURCE_ROOT; };
 		F58B13B4214C38B843E09DA7 /* 11.png */ /* 11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 11.png; path = ../../Source/Assets/11.png; sourceTree = SOURCE_ROOT; };
 		F5C6AE08DB663FA14C38697A /* 36.png */ /* 36.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 36.png; path = ../../Source/Assets/36.png; sourceTree = SOURCE_ROOT; };
 		F60B4A0E21049F5302B62860 /* 58.png */ /* 58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 58.png; path = ../../Source/Assets/58.png; sourceTree = SOURCE_ROOT; };
@@ -454,13 +449,10 @@
 				1F91EFD844AC18090A00E0E3,
 				AC18F7641AB78626B7D6FC76,
 				CBE1D5424D546B65698AD90B,
-				F54C6D07012ACC6A728C40F9,
 				F466B45D076AC7ECFC5014C6,
 				CD1DFD608EA52F64AE54A55C,
 				30548D68A899688A79A54782,
 				4D5EE7331B17E395C274543E,
-				66422AE87CA6B198186B8BDF,
-				5BF6EAAB6BA7DE0AF101394D,
 				230D0D74857760E8AB2784E3,
 			);
 			name = Source;
@@ -1080,10 +1072,8 @@
 				18E06B5F96A72BE9081BC12C,
 				EC36B3F4436EC35E06DFF32B,
 				F920A70BA2E3E22E2211A02A,
-				3500DB1D72ABE26CA7B71F6E,
 				108DB42BDEE265120917AF3C,
 				77E936744C6BF01A75682E3E,
-				DBE58F716381DA0C88B565DF,
 				D2F8A9D681F9BD65A4E20ACB,
 				13D6768FD8418E3A69E925F5,
 				16581838DFFE69EED32867A6,

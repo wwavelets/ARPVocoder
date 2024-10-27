@@ -808,16 +808,10 @@
     <ClCompile Include="..\..\Source\VocoderRewrite.cpp">
       <Filter>ARPVocoder\Source</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\VocoderPrev.cpp">
-      <Filter>ARPVocoder\Source</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Source\PluginProcessor.cpp">
       <Filter>ARPVocoder\Source</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\PluginEditor.cpp">
-      <Filter>ARPVocoder\Source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\VocoderProcessor.cpp">
       <Filter>ARPVocoder\Source</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\..\..\JUCE\modules\juce_audio_basics\audio_play_head\juce_AudioPlayHead.cpp">
@@ -3886,9 +3880,6 @@
       <Filter>ARPVocoder\Source</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\PluginEditor.h">
-      <Filter>ARPVocoder\Source</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\VocoderProcessor.h">
       <Filter>ARPVocoder\Source</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\IntegerDelay.h">

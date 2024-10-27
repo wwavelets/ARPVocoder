@@ -82,7 +82,7 @@ public:
         _isFocused = false;
     }
     bool canFocus() {
-        return mouseDown() && (!mouseWasDown()) && (!isFocused());
+        return (mouseDown() || rightMouseDown()) && (!mouseWasDown()) && (!rightMouseWasDown()) && (!isFocused());
     }
 private:
     int _mouseX = 0, _mouseY = 0, _prevMouseX = 0, _prevMouseY = 0;
